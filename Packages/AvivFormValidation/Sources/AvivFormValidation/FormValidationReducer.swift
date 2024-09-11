@@ -48,9 +48,9 @@ import Foundation
 /// }
 /// ```
 public struct FormValidationReducer<State, Action, ViewAction>: Reducer
-    where State == ViewAction.State, ViewAction: BindableAction & Equatable {
+where State == ViewAction.State, ViewAction: BindableAction {
     let toViewAction: (Action) -> ViewAction?
-    let submitAction: ViewAction
+    let submitAction: CaseKeyPath<ViewAction, Void>
     let onFormValidatedAction: Action
     let validations: [FieldValidation<State>]
 
@@ -64,7 +64,7 @@ public struct FormValidationReducer<State, Action, ViewAction>: Reducer
     ///    triggered by the `submitAction` succeed
     ///    - validations: The set of fields to validate by the reducer
     public init(
-        submitAction: ViewAction,
+        submitAction: CaseKeyPath<ViewAction, Void>,
         onFormValidatedAction: Action,
         validations: [FieldValidation<State>]
     ) where Action == ViewAction {
@@ -89,7 +89,7 @@ public struct FormValidationReducer<State, Action, ViewAction>: Reducer
     ///    - validations: The set of fields to validate by the reducer
     public init(
         viewAction toViewAction: @escaping (_ action: Action) -> ViewAction?,
-        submitAction: ViewAction,
+        submitAction: CaseKeyPath<ViewAction, Void>,
         onFormValidatedAction: Action,
         validations: [FieldValidation<State>]
     ) {
@@ -100,7 +100,10 @@ public struct FormValidationReducer<State, Action, ViewAction>: Reducer
     }
 
     public func reduce(into state: inout State, action: Action) -> Effect<Action> {
-        if toViewAction(action) == submitAction {
+        if
+            let viewAction = toViewAction(action),
+            AnyCasePath(submitAction).extract(from: viewAction) != nil
+        {
             let didSucceed = validateAllFields(state: &state)
             // On success validation
             return didSucceed ? .send(onFormValidatedAction) : .none
@@ -138,7 +141,7 @@ extension FormValidationReducer {
     ///    - validations: The set of fields to validate by the reducer
     public init(
         viewAction toViewAction: CaseKeyPath<Action, ViewAction>,
-        submitAction: ViewAction,
+        submitAction: CaseKeyPath<ViewAction, Void>,
         onFormValidatedAction: Action,
         validations: [FieldValidation<State>]
     ) where Action: CasePathable {
