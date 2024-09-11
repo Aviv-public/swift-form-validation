@@ -27,18 +27,11 @@ public struct FieldValidation<State> {
 
         self._validate = { state in
             let value = state[keyPath: field]
+            let validationError = rules.validate(value)
 
-            do {
-                try rules.validate(value)
-                state[keyPath: errorState] = nil
-                return true
-            } catch let ruleError as LocalizedError {
-                state[keyPath: errorState] = ruleError.errorDescription
-                return false
-            } catch {
-                state[keyPath: errorState] = "Validation error: invalid input"
-                return false
-            }
+            state[keyPath: errorState] = validationError
+
+            return validationError == nil
         }
     }
 

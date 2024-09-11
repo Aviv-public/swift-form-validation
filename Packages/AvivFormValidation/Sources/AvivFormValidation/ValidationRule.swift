@@ -22,9 +22,14 @@ public struct ValidationRule<Value> {
 
 public extension Collection {
     /// Triggers the validation of all ``ValidationRule``.
-    func validate<Value>(_ value: Value) -> Bool where Element == ValidationRule<Value> {
-        self.allSatisfy { rule in
-            rule.validate(value)
+    func validate<Value>(_ value: Value) -> String? where Element == ValidationRule<Value> {
+
+        for rule in self {
+            if rule.validate(value) == false {
+                return rule.errorMessage
+            }
         }
+
+        return nil
     }
 }
