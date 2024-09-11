@@ -28,12 +28,19 @@ struct UserProfileForm {
                 FieldValidation(
                     field: \.username,
                     rules: [
-                        ValidationRule(
-                            error: "Username should not be empy",
-                            validation: {
-                                !$0.isEmpty
-                            }
-                        )
+                        .nonEmpty(fieldName: "Username")
+                    ]
+                ),
+                FieldValidation(
+                    field: \.age,
+                    rules: [
+                        .greaterOrEqual(to: 18, fieldName: "Age")
+                    ]
+                ),
+                FieldValidation(
+                    field: \.agreeToSellSoul,
+                    rules: [
+                        .isEqual(to: true, errorMessage: "We need this, for your... safety!")
                     ]
                 )
             ]
