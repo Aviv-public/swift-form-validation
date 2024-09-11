@@ -24,6 +24,10 @@ public extension Collection {
     /// Triggers the validation of all ``ValidationRule``.
     func validate<Value>(_ value: Value) -> String? where Element == ValidationRule<Value> {
 
+        // To test
+//        rules
+//            .first(where: { $0.validate(value) == false })?
+//            .errorMessage
         for rule in self {
             if rule.validate(value) == false {
                 return rule.errorMessage
