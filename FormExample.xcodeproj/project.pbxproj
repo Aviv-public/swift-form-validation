@@ -15,6 +15,10 @@
 		6710231D2C917F990098223D /* FormExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231C2C917F990098223D /* FormExampleUITests.swift */; };
 		6710231F2C917F990098223D /* FormExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */; };
 		6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 6710232C2C9180D90098223D /* AvivFormValidation */; };
+		6716DF0C2C91E29800FE3E95 /* UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */; };
+		6716DF0E2C91E2D300FE3E95 /* UserProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */; };
+		6716DF112C91E44700FE3E95 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6716DF102C91E44700FE3E95 /* ComposableArchitecture */; };
+		6716DF132C91E6D500FE3E95 /* ValidatableFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF122C91E6D500FE3E95 /* ValidatableFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,9 @@
 		671023182C917F990098223D /* FormExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6710231C2C917F990098223D /* FormExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleUITests.swift; sourceTree = "<group>"; };
 		6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFormView.swift; sourceTree = "<group>"; };
+		6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileForm.swift; sourceTree = "<group>"; };
+		6716DF122C91E6D500FE3E95 /* ValidatableFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6716DF112C91E44700FE3E95 /* ComposableArchitecture in Frameworks */,
 				6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,8 +104,10 @@
 		671023002C917F970098223D /* FormExample */ = {
 			isa = PBXGroup;
 			children = (
+				6716DF092C91E26600FE3E95 /* ShowCases */,
 				671023012C917F970098223D /* FormExampleApp.swift */,
 				671023032C917F970098223D /* ContentView.swift */,
+				6716DF122C91E6D500FE3E95 /* ValidatableFieldView.swift */,
 				671023052C917F990098223D /* Assets.xcassets */,
 				671023072C917F990098223D /* Preview Content */,
 			);
@@ -129,6 +139,23 @@
 			path = FormExampleUITests;
 			sourceTree = "<group>";
 		};
+		6716DF092C91E26600FE3E95 /* ShowCases */ = {
+			isa = PBXGroup;
+			children = (
+				6716DF0A2C91E27000FE3E95 /* UserProfile */,
+			);
+			path = ShowCases;
+			sourceTree = "<group>";
+		};
+		6716DF0A2C91E27000FE3E95 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */,
+				6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +174,7 @@
 			name = FormExample;
 			packageProductDependencies = (
 				6710232C2C9180D90098223D /* AvivFormValidation */,
+				6716DF102C91E44700FE3E95 /* ComposableArchitecture */,
 			);
 			productName = FormExample;
 			productReference = 671022FE2C917F970098223D /* FormExample.app */;
@@ -222,6 +250,7 @@
 			mainGroup = 671022F52C917F960098223D;
 			packageReferences = (
 				6710232B2C9180D90098223D /* XCLocalSwiftPackageReference "Packages/AvivFormValidation" */,
+				6716DF0F2C91E44700FE3E95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 671022FF2C917F970098223D /* Products */;
 			projectDirPath = "";
@@ -265,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6716DF0E2C91E2D300FE3E95 /* UserProfileForm.swift in Sources */,
 				671023042C917F970098223D /* ContentView.swift in Sources */,
+				6716DF132C91E6D500FE3E95 /* ValidatableFieldView.swift in Sources */,
+				6716DF0C2C91E29800FE3E95 /* UserProfileFormView.swift in Sources */,
 				671023022C917F970098223D /* FormExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -412,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -437,6 +469,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +498,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,10 +632,26 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		6716DF0F2C91E44700FE3E95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		6710232C2C9180D90098223D /* AvivFormValidation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AvivFormValidation;
+		};
+		6716DF102C91E44700FE3E95 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6716DF0F2C91E44700FE3E95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

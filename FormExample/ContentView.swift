@@ -41,7 +41,7 @@ struct ContentView: View {
     func destinationView(for showCase: FormShowCase) -> some View {
         switch showCase {
         case .simpleForm:
-            Text(title(for: showCase))
+            UserProfileFormView()
         }
     }
 }
