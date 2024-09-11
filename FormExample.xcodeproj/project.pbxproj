@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		671023132C917F990098223D /* FormExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671023122C917F990098223D /* FormExampleTests.swift */; };
 		6710231D2C917F990098223D /* FormExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231C2C917F990098223D /* FormExampleUITests.swift */; };
 		6710231F2C917F990098223D /* FormExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */; };
+		6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 6710232C2C9180D90098223D /* AvivFormValidation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = FormExample;
+			packageProductDependencies = (
+				6710232C2C9180D90098223D /* AvivFormValidation */,
+			);
 			productName = FormExample;
 			productReference = 671022FE2C917F970098223D /* FormExample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 671022F52C917F960098223D;
+			packageReferences = (
+				6710232B2C9180D90098223D /* XCLocalSwiftPackageReference "Packages/AvivFormValidation" */,
+			);
 			productRefGroup = 671022FF2C917F970098223D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -582,6 +590,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		6710232B2C9180D90098223D /* XCLocalSwiftPackageReference "Packages/AvivFormValidation" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/AvivFormValidation;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6710232C2C9180D90098223D /* AvivFormValidation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AvivFormValidation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 671022F62C917F960098223D /* Project object */;
 }
