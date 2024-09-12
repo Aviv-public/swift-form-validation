@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     enum FormShowCase: CaseIterable {
         case simpleForm
+        case noValidatableField
     }
 
     let forms = FormShowCase.allCases
@@ -35,13 +36,18 @@ struct ContentView: View {
         switch showCase {
         case .simpleForm:
             "User Profile"
+        case .noValidatableField:
+            "Without using ValidatableField"
         }
     }
 
+    @ViewBuilder
     func destinationView(for showCase: FormShowCase) -> some View {
         switch showCase {
         case .simpleForm:
             UserProfileFormView()
+        case .noValidatableField:
+            NoValidatableFieldFormView()
         }
     }
 }

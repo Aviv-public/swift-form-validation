@@ -20,7 +20,7 @@ struct ValidatableFieldView<Value, Content>: View where Content: View {
             if let errorText = field.errorText {
                 Text(errorText)
                     .lineLimit(2)
-                    .foregroundStyle(Color.red)
+                    .foregroundStyle(.red)
             }
         }
     }
