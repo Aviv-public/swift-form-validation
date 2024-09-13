@@ -24,9 +24,12 @@ struct ImageSubmissionForm {
         var selectedPicture: PhotosPickerItem?
         var selectedPictureError: String?
         var image: ImageFetching?
+
+        @Presents var alert: AlertState<Never>?
     }
 
     enum Action: BindableAction {
+        case alert(PresentationAction<Never>)
         case binding(BindingAction<State>)
         case didLoadImage(Image)
         case didFailToLoadImage
@@ -74,10 +77,15 @@ struct ImageSubmissionForm {
                 state.selectedPictureError = "Something went wrong loading the selected image"
                 return .none
 
-            case .binding, .submitButtonTap, .formValidationSucceed:
+            case .formValidationSucceed:
+                state.alert = .formValidationSuccess
+                return .none
+
+            case .binding, .submitButtonTap, .alert:
                 return .none
             }
         }
+        .ifLet(\.$alert, action: \.alert)
     }
 
     private func loadImage(for selectedPicture: PhotosPickerItem) -> Effect<Action> {

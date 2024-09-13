@@ -10,12 +10,15 @@ struct UserProfileForm {
         var age: ValidatableField<Int> = 18
         var agreeToSellSoul: ValidatableField<Bool> = false
         var userDescription: ValidatableField<String> = ""
+
+        @Presents var alert: AlertState<Never>?
     }
 
     enum Action: BindableAction {
         case registerButtonTap
         case formValidationSucceed
         case binding(BindingAction<State>)
+        case alert(PresentationAction<Never>)
     }
 
     var body: some ReducerOf<Self> {
@@ -52,12 +55,13 @@ struct UserProfileForm {
                 return .none
 
             case .formValidationSucceed:
-                // show alert
+                state.alert = .formValidationSuccess
                 return .none
 
-            case .binding:
+            case .binding, .alert:
                 return .none
             }
         }
+        .ifLet(\.$alert, action: \.alert)
     }
 }
