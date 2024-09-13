@@ -10,7 +10,7 @@ import PhotosUI
 import SwiftUI
 
 struct ImageSubmissionFormView: View {
-    @Bindable var store: StoreOf<ImageSubmissionForm>
+    @Perception.Bindable var store: StoreOf<ImageSubmissionForm>
 
     init() {
         self.store = Store(
@@ -20,42 +20,44 @@ struct ImageSubmissionFormView: View {
     }
     
     var body: some View {
-        Form {
-            ValidatableFieldView(field: $store.pictureName) { $pictureName in
-                TextField("Picture's name", text: $pictureName)
-            }
-
-            PhotosPicker("Select a picture", selection: $store.selectedPicture)
-
-            if let image = store.image {
-                switch image {
-                case .loading:
-                    ProgressView()
-                        .frame(width: 100, height: 100)
-                        .background(Color(white: 0.95))
-                        .id(UUID())
-
-                case let .image(image):
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity)
+        WithPerceptionTracking {
+            Form {
+                ValidatableFieldView(field: $store.pictureName) { $pictureName in
+                    TextField("Picture's name", text: $pictureName)
+                }
+                
+                PhotosPicker("Select a picture", selection: $store.selectedPicture)
+                
+                if let image = store.image {
+                    switch image {
+                    case .loading:
+                        ProgressView()
+                            .frame(width: 100, height: 100)
+                            .background(Color(white: 0.95))
+                            .id(UUID())
+                        
+                    case let .image(image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+                
+                if let selectionError = store.selectedPictureError {
+                    Text(selectionError)
+                        .lineLimit(2)
+                        .foregroundStyle(.red)
+                }
+                
+                Section {
+                    Button("Send picture") {
+                        store.send(.submitButtonTap)
+                    }
                 }
             }
-
-            if let selectionError = store.selectedPictureError {
-                Text(selectionError)
-                    .lineLimit(2)
-                    .foregroundStyle(.red)
-            }
-
-            Section {
-                Button("Send picture") {
-                    store.send(.submitButtonTap)
-                }
-            }
+            .alert($store.scope(state: \.alert, action: \.alert))
         }
-        .alert($store.scope(state: \.alert, action: \.alert))
     }
 }
 
