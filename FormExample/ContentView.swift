@@ -11,6 +11,7 @@ struct ContentView: View {
     enum FormShowCase: CaseIterable {
         case simpleForm
         case noValidatableField
+        case pictureSubmission
     }
 
     let forms = FormShowCase.allCases
@@ -38,6 +39,8 @@ struct ContentView: View {
             "User Profile"
         case .noValidatableField:
             "Without using ValidatableField"
+        case .pictureSubmission:
+            "Submit a picture"
         }
     }
 
@@ -48,6 +51,8 @@ struct ContentView: View {
             UserProfileFormView()
         case .noValidatableField:
             NoValidatableFieldFormView()
+        case .pictureSubmission:
+            ImageSubmissionFormView()
         }
     }
 }

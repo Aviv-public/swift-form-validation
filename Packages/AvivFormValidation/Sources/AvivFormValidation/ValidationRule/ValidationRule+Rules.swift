@@ -22,4 +22,8 @@ public extension ValidationRule {
     static func isEqual(to value: Value, errorMessage: String) -> Self where Value: Equatable {
         .init(error: errorMessage, validation: { $0 == value })
     }
+
+    static func nonOptional<T>(_ errorMessage: String) -> Self where Value == Optional<T> {
+        .init(error: errorMessage, validation: { $0 != nil })
+    }
 }

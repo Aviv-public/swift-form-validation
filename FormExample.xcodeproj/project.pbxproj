@@ -22,6 +22,8 @@
 		6793A03F2C92DABE009A7EE3 /* NoValidatableFieldFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A03E2C92DABE009A7EE3 /* NoValidatableFieldFormView.swift */; };
 		6793A0412C92DAE5009A7EE3 /* NoValidatableFieldForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A0402C92DAE5009A7EE3 /* NoValidatableFieldForm.swift */; };
 		6793A0432C92DD69009A7EE3 /* View+ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A0422C92DD69009A7EE3 /* View+ErrorMessage.swift */; };
+		6793A0492C9479BE009A7EE3 /* ImageSubmissionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A0482C9479BE009A7EE3 /* ImageSubmissionFormView.swift */; };
+		6793A04B2C947D7B009A7EE3 /* ImageSubmissionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A04A2C947D7B009A7EE3 /* ImageSubmissionForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		6793A03E2C92DABE009A7EE3 /* NoValidatableFieldFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoValidatableFieldFormView.swift; sourceTree = "<group>"; };
 		6793A0402C92DAE5009A7EE3 /* NoValidatableFieldForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoValidatableFieldForm.swift; sourceTree = "<group>"; };
 		6793A0422C92DD69009A7EE3 /* View+ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ErrorMessage.swift"; sourceTree = "<group>"; };
+		6793A0482C9479BE009A7EE3 /* ImageSubmissionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSubmissionFormView.swift; sourceTree = "<group>"; };
+		6793A04A2C947D7B009A7EE3 /* ImageSubmissionForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSubmissionForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 			children = (
 				6793A03D2C92DA80009A7EE3 /* NoValidatableField */,
 				6716DF0A2C91E27000FE3E95 /* UserProfile */,
+				6793A0472C947987009A7EE3 /* ImageSubmission */,
 			);
 			path = ShowCases;
 			sourceTree = "<group>";
@@ -179,6 +184,15 @@
 				6793A0422C92DD69009A7EE3 /* View+ErrorMessage.swift */,
 			);
 			path = ViewHelpers;
+			sourceTree = "<group>";
+		};
+		6793A0472C947987009A7EE3 /* ImageSubmission */ = {
+			isa = PBXGroup;
+			children = (
+				6793A04A2C947D7B009A7EE3 /* ImageSubmissionForm.swift */,
+				6793A0482C9479BE009A7EE3 /* ImageSubmissionFormView.swift */,
+			);
+			path = ImageSubmission;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6793A0492C9479BE009A7EE3 /* ImageSubmissionFormView.swift in Sources */,
 				6716DF0E2C91E2D300FE3E95 /* UserProfileForm.swift in Sources */,
 				671023042C917F970098223D /* ContentView.swift in Sources */,
 				6793A03F2C92DABE009A7EE3 /* NoValidatableFieldFormView.swift in Sources */,
 				6716DF132C91E6D500FE3E95 /* ValidatableFieldView.swift in Sources */,
+				6793A04B2C947D7B009A7EE3 /* ImageSubmissionForm.swift in Sources */,
 				6793A0412C92DAE5009A7EE3 /* NoValidatableFieldForm.swift in Sources */,
 				6716DF0C2C91E29800FE3E95 /* UserProfileFormView.swift in Sources */,
 				671023022C917F970098223D /* FormExampleApp.swift in Sources */,
