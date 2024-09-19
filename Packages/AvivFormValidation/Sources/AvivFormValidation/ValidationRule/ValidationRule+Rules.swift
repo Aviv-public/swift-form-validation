@@ -8,6 +8,10 @@ public extension ValidationRule {
         )
     }
 
+    static func length(min: UInt, error: String) -> Self where Value: Collection {
+        .init(error: error, validation: { $0.count >= min })
+    }
+
     static func greaterOrEqual(to value: Value, fieldName: String) -> Self where Value: Comparable {
         .init(
             error: "\(fieldName.capitalized) should be greater or equal to \(value)",

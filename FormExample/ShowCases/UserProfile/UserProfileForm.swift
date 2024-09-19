@@ -31,7 +31,8 @@ struct UserProfileForm {
                 FieldValidation(
                     field: \.username,
                     rules: [
-                        .nonEmpty(fieldName: "Username")
+                        .nonEmpty(fieldName: "Username"),
+                        .length(min: 5, error: "Username is too short")
                     ]
                 ),
                 FieldValidation(
