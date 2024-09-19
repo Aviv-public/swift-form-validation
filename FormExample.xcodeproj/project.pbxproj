@@ -15,6 +15,7 @@
 		6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 6710232C2C9180D90098223D /* AvivFormValidation */; };
 		6714D15D2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D15C2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift */; };
 		6714D15F2C9C75B500DD54E6 /* UserProfileFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D15E2C9C75B500DD54E6 /* UserProfileFormTests.swift */; };
+		6714D1612C9C76E200DD54E6 /* ImageSubmissionFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D1602C9C76E200DD54E6 /* ImageSubmissionFormTests.swift */; };
 		6716DF0C2C91E29800FE3E95 /* UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */; };
 		6716DF0E2C91E2D300FE3E95 /* UserProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */; };
 		6716DF112C91E44700FE3E95 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6716DF102C91E44700FE3E95 /* ComposableArchitecture */; };
@@ -47,6 +48,7 @@
 		671023122C917F990098223D /* FormExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleTests.swift; sourceTree = "<group>"; };
 		6714D15C2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoValidatableFieldFormTests.swift; sourceTree = "<group>"; };
 		6714D15E2C9C75B500DD54E6 /* UserProfileFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFormTests.swift; sourceTree = "<group>"; };
+		6714D1602C9C76E200DD54E6 /* ImageSubmissionFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSubmissionFormTests.swift; sourceTree = "<group>"; };
 		6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFormView.swift; sourceTree = "<group>"; };
 		6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileForm.swift; sourceTree = "<group>"; };
 		6716DF122C91E6D500FE3E95 /* ValidatableFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableFieldView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				671023122C917F990098223D /* FormExampleTests.swift */,
 				6714D15C2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift */,
 				6714D15E2C9C75B500DD54E6 /* UserProfileFormTests.swift */,
+				6714D1602C9C76E200DD54E6 /* ImageSubmissionFormTests.swift */,
 			);
 			path = FormExampleTests;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				671023132C917F990098223D /* FormExampleTests.swift in Sources */,
 				6714D15F2C9C75B500DD54E6 /* UserProfileFormTests.swift in Sources */,
 				6714D15D2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift in Sources */,
+				6714D1612C9C76E200DD54E6 /* ImageSubmissionFormTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

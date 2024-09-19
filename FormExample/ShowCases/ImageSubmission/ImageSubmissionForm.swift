@@ -14,8 +14,8 @@ import SwiftUI
 @Reducer
 struct ImageSubmissionForm {
     @ObservableState
-    struct State {
-        enum ImageFetching {
+    struct State: Equatable {
+        enum ImageFetching: Equatable {
             case image(Image)
             case loading
         }
