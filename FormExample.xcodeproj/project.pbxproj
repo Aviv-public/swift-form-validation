@@ -12,8 +12,6 @@
 		671023062C917F990098223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671023052C917F990098223D /* Assets.xcassets */; };
 		671023092C917F990098223D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671023082C917F990098223D /* Preview Assets.xcassets */; };
 		671023132C917F990098223D /* FormExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671023122C917F990098223D /* FormExampleTests.swift */; };
-		6710231D2C917F990098223D /* FormExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231C2C917F990098223D /* FormExampleUITests.swift */; };
-		6710231F2C917F990098223D /* FormExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */; };
 		6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 6710232C2C9180D90098223D /* AvivFormValidation */; };
 		6716DF0C2C91E29800FE3E95 /* UserProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */; };
 		6716DF0E2C91E2D300FE3E95 /* UserProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */; };
@@ -35,13 +33,6 @@
 			remoteGlobalIDString = 671022FD2C917F970098223D;
 			remoteInfo = FormExample;
 		};
-		671023192C917F990098223D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 671022F62C917F960098223D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 671022FD2C917F970098223D;
-			remoteInfo = FormExample;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +43,6 @@
 		671023082C917F990098223D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6710230E2C917F990098223D /* FormExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671023122C917F990098223D /* FormExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleTests.swift; sourceTree = "<group>"; };
-		671023182C917F990098223D /* FormExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6710231C2C917F990098223D /* FormExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleUITests.swift; sourceTree = "<group>"; };
-		6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6716DF0B2C91E29800FE3E95 /* UserProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFormView.swift; sourceTree = "<group>"; };
 		6716DF0D2C91E2D300FE3E95 /* UserProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileForm.swift; sourceTree = "<group>"; };
 		6716DF122C91E6D500FE3E95 /* ValidatableFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatableFieldView.swift; sourceTree = "<group>"; };
@@ -83,13 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		671023152C917F990098223D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -98,7 +79,6 @@
 			children = (
 				671023002C917F970098223D /* FormExample */,
 				671023112C917F990098223D /* FormExampleTests */,
-				6710231B2C917F990098223D /* FormExampleUITests */,
 				671022FF2C917F970098223D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,7 +88,6 @@
 			children = (
 				671022FE2C917F970098223D /* FormExample.app */,
 				6710230E2C917F990098223D /* FormExampleTests.xctest */,
-				671023182C917F990098223D /* FormExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,15 +119,6 @@
 				671023122C917F990098223D /* FormExampleTests.swift */,
 			);
 			path = FormExampleTests;
-			sourceTree = "<group>";
-		};
-		6710231B2C917F990098223D /* FormExampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6710231C2C917F990098223D /* FormExampleUITests.swift */,
-				6710231E2C917F990098223D /* FormExampleUITestsLaunchTests.swift */,
-			);
-			path = FormExampleUITests;
 			sourceTree = "<group>";
 		};
 		6716DF092C91E26600FE3E95 /* ShowCases */ = {
@@ -240,24 +210,6 @@
 			productReference = 6710230E2C917F990098223D /* FormExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		671023172C917F990098223D /* FormExampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 671023282C917F990098223D /* Build configuration list for PBXNativeTarget "FormExampleUITests" */;
-			buildPhases = (
-				671023142C917F990098223D /* Sources */,
-				671023152C917F990098223D /* Frameworks */,
-				671023162C917F990098223D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6710231A2C917F990098223D /* PBXTargetDependency */,
-			);
-			name = FormExampleUITests;
-			productName = FormExampleUITests;
-			productReference = 671023182C917F990098223D /* FormExampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,10 +224,6 @@
 						CreatedOnToolsVersion = 15.4;
 					};
 					6710230D2C917F990098223D = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 671022FD2C917F970098223D;
-					};
-					671023172C917F990098223D = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 671022FD2C917F970098223D;
 					};
@@ -300,7 +248,6 @@
 			targets = (
 				671022FD2C917F970098223D /* FormExample */,
 				6710230D2C917F990098223D /* FormExampleTests */,
-				671023172C917F990098223D /* FormExampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,13 +263,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6710230C2C917F990098223D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671023162C917F990098223D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,15 +298,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		671023142C917F990098223D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6710231D2C917F990098223D /* FormExampleUITests.swift in Sources */,
-				6710231F2C917F990098223D /* FormExampleUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,11 +305,6 @@
 			isa = PBXTargetDependency;
 			target = 671022FD2C917F970098223D /* FormExample */;
 			targetProxy = 6710230F2C917F990098223D /* PBXContainerItemProxy */;
-		};
-		6710231A2C917F990098223D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 671022FD2C917F970098223D /* FormExample */;
-			targetProxy = 671023192C917F990098223D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -598,40 +524,6 @@
 			};
 			name = Release;
 		};
-		671023292C917F990098223D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aviv.FormExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FormExample;
-			};
-			name = Debug;
-		};
-		6710232A2C917F990098223D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.aviv.FormExampleUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FormExample;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -658,15 +550,6 @@
 			buildConfigurations = (
 				671023262C917F990098223D /* Debug */,
 				671023272C917F990098223D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		671023282C917F990098223D /* Build configuration list for PBXNativeTarget "FormExampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				671023292C917F990098223D /* Debug */,
-				6710232A2C917F990098223D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
