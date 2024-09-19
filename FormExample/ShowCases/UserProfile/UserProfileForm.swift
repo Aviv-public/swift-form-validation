@@ -5,7 +5,7 @@ import Foundation
 @Reducer
 struct UserProfileForm {
     @ObservableState
-    struct State {
+    struct State: Equatable {
         var username: ValidatableField<String> = ""
         var age: ValidatableField<Int> = 18
         var agreeToSellSoul: ValidatableField<Bool> = false

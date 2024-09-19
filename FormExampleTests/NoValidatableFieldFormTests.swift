@@ -2,7 +2,7 @@
 import ComposableArchitecture
 import XCTest
 
-final class NoValidatableFieldTests: XCTestCase {
+final class NoValidatableFieldFormTests: XCTestCase {
 
     @MainActor
     func test_userSubmitsForm_withInitialState() async {
