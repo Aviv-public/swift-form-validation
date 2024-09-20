@@ -36,7 +36,7 @@ public struct FieldValidation<State> {
     }
 
     @discardableResult
-    func validate(state: inout State) -> Bool {
+    public func validate(state: inout State) -> Bool {
         _validate(&state)
     }
 }
