@@ -1,7 +1,7 @@
 import Foundation
 
 public extension ValidationRule {
-    static func nonEmpty(fieldName: String) -> Self where Value: StringProtocol {
+    static func nonEmpty(fieldName: String) -> Self where Value: Collection {
         .init(
             error: "\(fieldName.capitalized) should not be empty",
             validation: { !$0.isEmpty }
