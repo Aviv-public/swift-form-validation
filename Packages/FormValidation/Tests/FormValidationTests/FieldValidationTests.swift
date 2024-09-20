@@ -1,4 +1,4 @@
-import AvivFormValidation
+import FormValidation
 import XCTest
 
 final class FieldValidationTests: XCTestCase {

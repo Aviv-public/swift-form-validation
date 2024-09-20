@@ -1,8 +1,8 @@
 import ComposableArchitecture
 import XCTest
-@testable import AvivFormValidation
+@testable import FormValidation
 
-final class AvivFormValidationTests: XCTestCase {
+final class FormValidationTests: XCTestCase {
 
     @MainActor
     func test_validationFormReducer() async {

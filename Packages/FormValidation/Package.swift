@@ -4,13 +4,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "AvivFormValidation",
+    name: "FormValidation",
     platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "AvivFormValidation",
-            targets: ["AvivFormValidation"]
+            name: "FormValidation",
+            targets: ["FormValidation"]
         ),
     ],
     dependencies: [
@@ -23,7 +23,7 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "AvivFormValidation",
+            name: "FormValidation",
             dependencies: [
                 .product(
                     name: "ComposableArchitecture",
@@ -32,8 +32,8 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "AvivFormValidationTests",
-            dependencies: ["AvivFormValidation"]
+            name: "FormValidationTests",
+            dependencies: ["FormValidation"]
         ),
     ]
 )

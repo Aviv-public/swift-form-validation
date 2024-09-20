@@ -11,7 +11,6 @@
 		671023042C917F970098223D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671023032C917F970098223D /* ContentView.swift */; };
 		671023062C917F990098223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671023052C917F990098223D /* Assets.xcassets */; };
 		671023092C917F990098223D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671023082C917F990098223D /* Preview Assets.xcassets */; };
-		6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 6710232C2C9180D90098223D /* AvivFormValidation */; };
 		6714D15D2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D15C2C9C725600DD54E6 /* NoValidatableFieldFormTests.swift */; };
 		6714D15F2C9C75B500DD54E6 /* UserProfileFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D15E2C9C75B500DD54E6 /* UserProfileFormTests.swift */; };
 		6714D1612C9C76E200DD54E6 /* ImageSubmissionFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6714D1602C9C76E200DD54E6 /* ImageSubmissionFormTests.swift */; };
@@ -25,6 +24,7 @@
 		6793A0492C9479BE009A7EE3 /* ImageSubmissionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A0482C9479BE009A7EE3 /* ImageSubmissionFormView.swift */; };
 		6793A04B2C947D7B009A7EE3 /* ImageSubmissionForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A04A2C947D7B009A7EE3 /* ImageSubmissionForm.swift */; };
 		6793A04D2C948728009A7EE3 /* AlertState+FormValidated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793A04C2C948728009A7EE3 /* AlertState+FormValidated.swift */; };
+		67F628C52C9D702B005BD486 /* FormValidation in Frameworks */ = {isa = PBXBuildFile; productRef = 67F628C42C9D702B005BD486 /* FormValidation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F628C52C9D702B005BD486 /* FormValidation in Frameworks */,
 				6716DF112C91E44700FE3E95 /* ComposableArchitecture in Frameworks */,
-				6710232D2C9180D90098223D /* AvivFormValidation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +191,8 @@
 			);
 			name = FormExample;
 			packageProductDependencies = (
-				6710232C2C9180D90098223D /* AvivFormValidation */,
 				6716DF102C91E44700FE3E95 /* ComposableArchitecture */,
+				67F628C42C9D702B005BD486 /* FormValidation */,
 			);
 			productName = FormExample;
 			productReference = 671022FE2C917F970098223D /* FormExample.app */;
@@ -245,8 +245,8 @@
 			);
 			mainGroup = 671022F52C917F960098223D;
 			packageReferences = (
-				6710232B2C9180D90098223D /* XCLocalSwiftPackageReference "Packages/AvivFormValidation" */,
 				6716DF0F2C91E44700FE3E95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				67F628C32C9D702B005BD486 /* XCLocalSwiftPackageReference "Packages/FormValidation" */,
 			);
 			productRefGroup = 671022FF2C917F970098223D /* Products */;
 			projectDirPath = "";
@@ -565,9 +565,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		6710232B2C9180D90098223D /* XCLocalSwiftPackageReference "Packages/AvivFormValidation" */ = {
+		67F628C32C9D702B005BD486 /* XCLocalSwiftPackageReference "Packages/FormValidation" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = Packages/AvivFormValidation;
+			relativePath = Packages/FormValidation;
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -583,14 +583,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6710232C2C9180D90098223D /* AvivFormValidation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AvivFormValidation;
-		};
 		6716DF102C91E44700FE3E95 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6716DF0F2C91E44700FE3E95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		67F628C42C9D702B005BD486 /* FormValidation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FormValidation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,7 +5,7 @@
 //  Created by Anthony MERLE on 11/09/2024.
 //
 
-import AvivFormValidation
+import FormValidation
 import SwiftUI
 
 struct ValidatableFieldView<Value, Content>: View where Content: View {

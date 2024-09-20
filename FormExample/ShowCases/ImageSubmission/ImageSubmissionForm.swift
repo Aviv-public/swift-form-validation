@@ -5,7 +5,7 @@
 //  Created by Anthony MERLE on 13/09/2024.
 //
 
-import AvivFormValidation
+import FormValidation
 import ComposableArchitecture
 import Foundation
 import PhotosUI
