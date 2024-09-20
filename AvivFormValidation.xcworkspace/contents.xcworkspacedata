@@ -4,6 +4,9 @@
    <Group
       location = "container:"
       name = "Packages">
+      <FileRef
+         location = "group:Packages/FormValidation">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:FormExample.xcodeproj">
