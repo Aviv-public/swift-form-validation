@@ -15,7 +15,7 @@ public struct ValidationRule<Value> {
         self.validation = validation
     }
 
-    func validate(_ value: Value) -> Bool {
+    public func validate(_ value: Value) -> Bool {
         validation(value)
     }
 }
@@ -23,17 +23,7 @@ public struct ValidationRule<Value> {
 public extension Collection {
     /// Triggers the validation of all ``ValidationRule``.
     func validate<Value>(_ value: Value) -> String? where Element == ValidationRule<Value> {
-
-        // To test
-//        rules
-//            .first(where: { $0.validate(value) == false })?
-//            .errorMessage
-        for rule in self {
-            if rule.validate(value) == false {
-                return rule.errorMessage
-            }
-        }
-
-        return nil
+        first(where: { $0.validate(value) == false })
+            .map(\.errorMessage)
     }
 }
