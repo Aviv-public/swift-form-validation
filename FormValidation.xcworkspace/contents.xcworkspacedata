@@ -2,13 +2,143 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "container:"
-      name = "Packages">
+      location = "group:Example"
+      name = "Example">
+      <Group
+         location = "group:FormExample"
+         name = "FormExample">
+         <FileRef
+            location = "group:Assets.xcassets">
+         </FileRef>
+         <Group
+            location = "group:ViewHelpers"
+            name = "ViewHelpers">
+            <FileRef
+               location = "group:AlertState+FormValidated.swift">
+            </FileRef>
+            <FileRef
+               location = "group:View+ErrorMessage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ValidatableFieldView.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:FormExampleApp.swift">
+         </FileRef>
+         <Group
+            location = "group:Preview Content"
+            name = "Preview Content">
+            <FileRef
+               location = "group:Preview Assets.xcassets">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:ShowCases"
+            name = "ShowCases">
+            <Group
+               location = "group:ImageSubmission"
+               name = "ImageSubmission">
+               <FileRef
+                  location = "group:ImageSubmissionFormView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:ImageSubmissionForm.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:NoValidatableField"
+               name = "NoValidatableField">
+               <FileRef
+                  location = "group:NoValidatableFieldFormView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:NoValidatableFieldForm.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:UserProfile"
+               name = "UserProfile">
+               <FileRef
+                  location = "group:UserProfileFormView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:UserProfileForm.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:ContentView.swift">
+         </FileRef>
+      </Group>
       <FileRef
-         location = "group:Packages/FormValidation">
+         location = "group:FormExample.xcodeproj">
       </FileRef>
+      <Group
+         location = "group:FormExampleTests"
+         name = "FormExampleTests">
+         <FileRef
+            location = "group:UserProfileFormTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:NoValidatableFieldFormTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ImageSubmissionFormTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Sources"
+      name = "Sources">
+      <Group
+         location = "group:FormValidation"
+         name = "FormValidation">
+         <Group
+            location = "group:ValidationRule"
+            name = "ValidationRule">
+            <FileRef
+               location = "group:ValidationRule+Rules.swift">
+            </FileRef>
+            <FileRef
+               location = "group:ValidationRule.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:FormValidationReducer.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ValidatableField.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FieldValidation.swift">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
-      location = "group:FormExample.xcodeproj">
+      location = "group:LICENSE">
    </FileRef>
+   <FileRef
+      location = "group:Package.resolved">
+   </FileRef>
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
+   <Group
+      location = "group:Tests"
+      name = "Tests">
+      <Group
+         location = "group:FormValidationTests"
+         name = "FormValidationTests">
+         <FileRef
+            location = "group:ValidationRuleTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FieldValidationTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FormValidationTests.swift">
+         </FileRef>
+      </Group>
+   </Group>
 </Workspace>
